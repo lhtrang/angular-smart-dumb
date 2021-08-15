@@ -1,0 +1,10 @@
+<h3>TODO list</h3>
+<input type="text" [value]="search" (keyup)="onSearchChange($event)" />
+<ng-container *ngFor="let todo of todoList">
+  <app-todo-item [item]="todo"
+                 (saveTodo)="saveTodo.emit($event)"
+                 (draftInput)="draftInput.emit($event)"
+                 (enableEditMode)="enableEditMode.emit($event)"
+                 (cancelEdit)="cancelEdit.emit($event)"
+                 (deleteTodo)="deleteTodo.emit($event)"></app-todo-item>
+</ng-container>

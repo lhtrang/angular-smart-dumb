@@ -1,0 +1,16 @@
+<div>
+  <ng-container *ngIf="item.isEditing">
+    <input type="text" [value]="item.draft" (keyup)="onDraftInput($event, item)"/>
+    <div>
+      <button (click)="onSave(item)">SAVE</button>
+      <button (click)="onCancelEdit(item.id)">CANCEL</button>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!item.isEditing">
+    <p>{{item.value}}</p>
+    <div>
+      <button (click)="onEditTodo(item.id)">EDIT</button>
+      <button (click)="onDeleteTodo(item.id)">DELETE</button>
+    </div>
+  </ng-container>
+</div>

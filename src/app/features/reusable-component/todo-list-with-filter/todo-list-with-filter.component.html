@@ -1,0 +1,13 @@
+<app-list-with-filter header="TODO list"
+                      [list]="todoList$ | async"
+                      [search]="search$ | async"
+                      (searchInput)="onSearchInput($event)">
+  <ng-template let-todo appItemTemplate>
+    <app-todo-item [item]="todo"
+                   (saveTodo)="onSaveTodo($event)"
+                   (draftInput)="onDraftInput($event)"
+                   (enableEditMode)="onEnableEditMode($event)"
+                   (cancelEdit)="onCancelEdit($event)"
+                   (deleteTodo)="onDeleteTodo($event)"></app-todo-item>
+  </ng-template>
+</app-list-with-filter>

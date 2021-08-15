@@ -1,0 +1,13 @@
+<h3>Super smart component example</h3>
+<app-new-todo
+  [newTodo]="newTodo$ | async"
+  (addTodo)="onAddNewTodo()"
+  (newTodoInput)="onNewTodoInput($event)"></app-new-todo>
+<app-todo-list-with-filter [todoList]="todoList$ | async"
+                           [search]="search$ | async"
+                           (searchInput)="onSearchInput($event)"
+                           (saveTodo)="onSaveTodo($event)"
+                           (draftInput)="onDraftInput($event)"
+                           (enableEditMode)="onEnableEditMode($event)"
+                           (cancelEdit)="onCancelEdit($event)"
+                           (deleteTodo)="onDeleteTodo($event)"></app-todo-list-with-filter>

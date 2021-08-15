@@ -1,0 +1,7 @@
+<h3>{{header}}</h3>
+<input type="text" [value]="search" (keyup)="onSearchInput($event)" />
+<ng-container *ngFor="let item of list; let i = index"
+              [ngTemplateOutlet]="template.templateRef"
+              [ngTemplateOutletContext]="{$implicit: item, index: i}">
+</ng-container>
+
