@@ -1,6 +1,7 @@
 # AngularSmartDumb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+Example for smart-dumb components concept. Include NGRX combination.
+Blog link [here](https://tranglh.medium.com/front-end-architecture-view-layer-smart-dumb-components-8d06c011ea72).
 
 ## Development server
 
